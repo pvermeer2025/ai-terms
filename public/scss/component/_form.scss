@@ -1,0 +1,221 @@
+@use "../abstracts/index" as *;
+
+form {
+    position: relative;
+    z-index: 9;
+    textarea,
+    input[type="text"],
+    input[type="password"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="date"],
+    input[type="month"],
+    input[type="time"],
+    input[type="week"],
+    input[type="number"],
+    input[type="email"],
+    input[type="url"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="color"] {
+        outline: 0;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        width: 100%;
+        padding: 10px 14px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        background-color: var(--White-light);
+        border: 2px solid var(--Line);
+        border-radius: 8px;
+        color: var(--On-surface);
+        overflow: hidden;
+        margin-bottom: 0;
+        &::placeholder {
+            color: var(--Secondary);
+        }
+        @include res(md, min) {
+            height: 50px;
+        }
+    }
+    button,
+    input[type="button"],
+    input[type="reset"],
+    input[type="submit"] {
+        background-color: transparent;
+        overflow: hidden;
+        padding: 0;
+    }
+    textarea {
+        height: 100px;
+        padding: 10px 19px;
+    }
+}
+
+.form-search {
+    fieldset input {
+        border-radius: 1000px;
+        height: 50px;
+    }
+    .btn-submit {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 8px;
+    }
+    .tf-btn {
+        height: 36px;
+    }
+    @include res(md, min) {
+        fieldset input {
+            height: 60px;
+        }
+        .tf-btn {
+            height: 44px;
+        }
+    }
+    &.style-1 {
+        .btn-icon {
+            @include flex-center;
+            background-color: var(--On-surface);
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+            color: var(--White-light);
+            font-size: 16px;
+        }
+        @include res(md, min) {
+            .btn-icon {
+                font-size: 20px;
+                height: 44px;
+                width: 44px;
+            }
+        }
+    }
+    &.style-2 {
+        max-width: 260px;
+        width: 100%;
+        fieldset input {
+            height: 42px;
+            border: none;
+            border-bottom: 2px solid var(--On-surface);
+            border-radius: 0;
+            padding: 0;
+        }
+        .btn-submit {
+            top: 11px;
+            transform: unset;
+            right: 0;
+        }
+        .btn-icon {
+            font-size: 24px;
+            height: unset;
+            color: var(--On-surface);
+        }
+    }
+}
+
+.form-newslate {
+    fieldset input {
+        border-radius: 100px;
+        padding-left: 28px;
+    }
+    .btn-submit {
+        height: 36px;
+        width: 36px;
+        font-size: 16px;
+        border-radius: 50%;
+        background-color: var(--On-surface);
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--White);
+        @include flex-center;
+    }
+    @include res(md, min) {
+        fieldset input {
+            height: 64px;
+        }
+        .btn-submit {
+            height: 48px;
+            width: 48px;
+            font-size: 24px;
+        }
+    }
+}
+
+.tf-check {
+    position: relative;
+    cursor: pointer;
+    outline: 0;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--Secondary);
+    background-color: transparent;
+    @include transition3();
+    &:checked {
+        background-color: var(--Secondary) !important;
+        &::before {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+    &::before {
+        font-family: $fontIcon;
+        content: "\e90d";
+        position: absolute;
+        color: var(--White-light);
+        opacity: 0;
+        left: -1px;
+        top: 0px;
+        font-size: 12px;
+        transform: scale(0.5);
+        @include transition3;
+    }
+}
+
+.box-fieldset-item {
+    fieldset {
+        margin-top: 5.5px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        margin-left: 3px;
+    }
+}
+
+.form-leave-comment {
+    .tf-grid-layout {
+        --spacing: 17px;
+    }
+    fieldset input {
+        color: var(--Secondary2);
+        &::placeholder {
+            color: var(--Secondary2);
+        }
+    }
+    textarea {
+        height: 160px;
+        color: var(--Secondary2);
+        &::placeholder {
+            color: var(--Secondary2);
+        }
+    }
+}
+
+.form-contact {
+    @include res(lg, min) {
+        .tf-grid-layout {
+            gap: 40px;
+        }
+    }
+    .button-submit {
+        margin-top: 33px;
+    }
+}

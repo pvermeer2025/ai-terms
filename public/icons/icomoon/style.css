@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?7xu8la');
+  src:  url('fonts/icomoon.eot?7xu8la#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7xu8la') format('truetype'),
+    url('fonts/icomoon.woff?7xu8la') format('woff'),
+    url('fonts/icomoon.svg?7xu8la#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e900";
+}
+.icon-X:before {
+  content: "\e901";
+}
+.icon-CheckCircle:before {
+  content: "\e902";
+}
+.icon-TwitterLogo:before {
+  content: "\e903";
+}
+.icon-MapPin:before {
+  content: "\e904";
+}
+.icon-ChatsCircle:before {
+  content: "\e905";
+}
+.icon-Eye:before {
+  content: "\e906";
+}
+.icon-XCircle:before {
+  content: "\e907";
+}
+.icon-CaretUp:before {
+  content: "\e908";
+}
+.icon-check:before {
+  content: "\e90d";
+}
+.icon-CaretDown:before {
+  content: "\e927";
+}
+.icon-CaretLeft:before {
+  content: "\e928";
+}
+.icon-CaretRight:before {
+  content: "\e929";
+}
+.icon-FacebookLogo:before {
+  content: "\e92a";
+}
+.icon-InstagramLogo:before {
+  content: "\e92b";
+}
+.icon-PaperPlaneTilt:before {
+  content: "\e92c";
+}
+.icon-PinterestLogo:before {
+  content: "\e92d";
+}
+.icon-Timer:before {
+  content: "\e92f";
+}
+.icon-XLogo:before {
+  content: "\e930";
+}
+.icon-play-filled:before {
+  content: "\e946";
+}
+.icon-pause:before {
+  content: "\ea16";
+}

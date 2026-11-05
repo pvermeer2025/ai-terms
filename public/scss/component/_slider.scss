@@ -1,0 +1,82 @@
+@use "../abstracts/index" as *;
+
+.sw-button {
+    position: unset;
+    margin-top: 0;
+    @include flex(center, center);
+    @include transition3();
+    border-radius: 8px;
+    &.style-default {
+        height: 32px;
+        width: 32px;
+        border: 1px solid var(--On-surface);
+        background-color: var(--White);
+        i {
+            font-size: 24px;
+        }
+        &::after {
+            display: none;
+        }
+        @include res(md, min) {
+            height: 46px;
+            width: 46px;
+        }
+    }
+    &.style-cycle {
+        height: 35px;
+        width: 35px;
+        color: var(--White-light);
+        border: 1px solid var(--On-surface);
+        background-color: var(--On-surface);
+        border-radius: 50%;
+        font-size: 22px;
+        &:hover, &.swiper-button-disabled {
+            background-color: var(--White-lght);
+            border-color: var(--Line);
+            color: var(--On-surface);
+        }
+        @include res(md, min) {
+            font-size: 28px;
+            height: 48px;
+            width: 48px;
+        }
+    }
+    &.style-1 {
+        font-size: 28px;
+        padding: 28px 12px;
+        background-color: var(--White);
+        &.swiper-button-disabled {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            color: var(--White);
+        }
+        &:hover{
+            background-color: var(--On-surface);
+            color: var(--White);
+        }
+        @include res(lg) {
+            font-size: 22px;
+            padding: 17px 6px;
+        }
+    }
+}
+
+.sw-dots {
+    .swiper-pagination-bullet {
+        background: var(--Line);
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+        &.swiper-pagination-bullet-active {
+            background-color: var(--On-surface) !important;
+        }
+    }
+    &.style-1 {
+        .swiper-pagination-bullet {
+            background: var(--Secondary);
+            &.swiper-pagination-bullet-active {
+                background-color: var(--White) !important;
+            }
+        }
+    }
+}

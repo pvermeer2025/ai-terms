@@ -1,0 +1,38 @@
+{
+  "name": "ai-terms",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI Terms",
+  "scripts": {
+    "dev": "next dev -p 3003",
+    "build": "next build",
+    "start": "next start -p 3003",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.5",
+    "next": "16.2.10",
+    "pg": "^8.23.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "redis": "^6.2.1",
+    "sass": "^1.89.2",
+    "splitting": "^1.1.0",
+    "swiper": "^11.2.8",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.10",
+    "@types/drift-zoom": "^1.5.2",
+    "@types/node": "^20",
+    "@types/pg": "^8.23.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/splitting": "^1.0.6",
+    "@types/swiper": "^5.4.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "typescript": "^5"
+  }
+}

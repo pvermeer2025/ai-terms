@@ -1,0 +1,592 @@
+@use "../abstracts/index" as *;
+
+.tb-article {
+    color: var(--Secondary);
+    padding-bottom: 72px;
+
+    h1,
+    h2,
+    h3 {
+        overflow-wrap: break-word;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0 0 16px;
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--Maritime);
+        outline-offset: 3px;
+    }
+
+    .breadcrumb {
+        background: transparent;
+        margin-bottom: 0;
+    }
+
+    .breadcrumb li:last-child {
+        min-width: 0;
+    }
+
+    @include res(md) {
+        padding-bottom: 48px;
+    }
+}
+
+.tb-measure {
+    width: 100%;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tb-kicker,
+.tb-date,
+.tb-toc-label {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.tb-kicker {
+    margin: 0;
+    color: var(--Maritime);
+}
+
+.tb-date {
+    margin: 12px 0 0;
+    color: var(--Secondary2);
+}
+
+.tb-sample-note {
+    margin: 0 0 16px;
+    color: var(--Secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.tb-lede {
+    color: var(--On-surface);
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.tb-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tb-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 16px;
+    border-radius: 999px;
+    background: var(--Maritime-mist);
+    color: var(--Maritime);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.tb-section {
+    margin-top: 36px;
+}
+
+.tb-section--lead {
+    margin-top: 0;
+}
+
+.tb-sections .tb-section:first-child {
+    margin-top: 0;
+}
+
+.tb-section h2,
+.tb-sources h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 12px;
+    scroll-margin-top: 88px;
+}
+
+.tb-steps,
+.tb-cards {
+    list-style: none;
+    margin: 4px 0 20px;
+    padding: 0;
+}
+
+.tb-steps {
+    display: grid;
+    gap: 12px;
+    counter-reset: tb-step;
+}
+
+.tb-steps li {
+    display: grid;
+    grid-template-columns: 28px minmax(0, 1fr);
+    gap: 10px;
+    align-items: start;
+    font-size: 18px;
+    line-height: 30px;
+    counter-increment: tb-step;
+}
+
+.tb-steps li::before {
+    content: counter(tb-step);
+    color: var(--Maritime);
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.tb-cards {
+    display: grid;
+    gap: 16px;
+}
+
+.tb-card h3 {
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 6px;
+}
+
+.tb-card p {
+    margin: 0;
+}
+
+.tb-sources {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--Line);
+}
+
+.tb-sources-note {
+    margin: 0 0 14px;
+    color: var(--Secondary);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-transform: none;
+}
+
+.tb-sources ol {
+    margin: 0;
+    padding-left: 1.2em;
+    display: grid;
+    gap: 12px;
+}
+
+.tb-sources li {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.tb-sources a {
+    color: var(--Maritime);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+}
+
+.tb-status {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px 0;
+}
+
+.tb-status h1 {
+    font-size: 31px;
+    line-height: 39px;
+    margin-bottom: 12px;
+}
+
+.tb-variant-nav {
+    border-bottom: 1px solid var(--Line);
+
+    .tf-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 20px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    a {
+        padding: 12px 0;
+        color: var(--Secondary);
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+    }
+
+    a[aria-current="page"] {
+        color: var(--On-surface);
+        box-shadow: inset 0 -2px 0 var(--On-surface);
+    }
+
+    a:focus-visible {
+        outline: 2px solid var(--Maritime);
+        outline-offset: 3px;
+    }
+}
+
+.tb-article--redactie {
+    .tb-redactie-head {
+        padding: 48px 0 28px;
+        margin-bottom: 36px;
+        border-bottom: 1px solid var(--Line);
+    }
+
+    .tb-redactie-intro {
+        max-width: 920px;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+
+    .tb-redactie-intro h1 {
+        margin-top: 14px;
+    }
+
+    .tb-tags {
+        justify-content: center;
+    }
+
+    .tb-card {
+        padding-top: 14px;
+        border-top: 1px solid var(--Line);
+    }
+}
+
+.tb-article--katern {
+    .tb-katern-wrap {
+        max-width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .tb-katern-head {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.85fr);
+        gap: 28px 40px;
+        padding: 40px 0 32px;
+        border-bottom: 1px solid var(--Line);
+    }
+
+    .tb-katern-head h1 {
+        margin-top: 10px;
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    .tb-katern-aside .tb-date {
+        margin-top: 0;
+    }
+
+    .tb-katern-aside .tb-tags {
+        margin-top: 16px;
+    }
+
+    .tb-katern-aside .tb-lede {
+        margin: 18px 0 0;
+    }
+
+    .tb-katern-layout {
+        display: grid;
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 36px;
+        align-items: start;
+        padding-top: 32px;
+    }
+
+    .tb-katern-layout--solo {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .tb-toc {
+        position: sticky;
+        top: 88px;
+    }
+
+    .tb-toc-label {
+        margin: 0 0 8px;
+        color: var(--Secondary2);
+    }
+
+    .tb-toc ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .tb-toc a {
+        display: inline-block;
+        padding: 7px 0;
+        color: var(--Secondary);
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 600;
+    }
+
+    .tb-toc a:hover {
+        color: var(--On-surface);
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+    }
+
+    .tb-katern-body {
+        max-width: 640px;
+    }
+
+    .tb-steps li {
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--Line);
+    }
+
+    .tb-steps li:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+    }
+
+    .tb-card {
+        padding-left: 16px;
+        border-left: 2px solid var(--Line);
+    }
+}
+
+.tb-article--briefing {
+    .tb-briefing-head {
+        padding-top: 36px;
+        margin-bottom: 8px;
+    }
+
+    .tb-briefing-head h1 {
+        margin: 8px 0 16px;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .tb-briefing-head .tb-date {
+        margin-top: 8px;
+    }
+
+    .tb-callout {
+        margin: 20px 0 0;
+        padding: 4px 0 4px 16px;
+        border-left: 2px solid var(--Maritime);
+        color: var(--On-surface);
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .tb-sections {
+        counter-reset: tb-sec;
+    }
+
+    .tb-section--headed h2::before {
+        counter-increment: tb-sec;
+        content: counter(tb-sec, decimal-leading-zero);
+        display: block;
+        margin-bottom: 6px;
+        color: var(--Maritime);
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.08em;
+    }
+
+    .tb-steps li {
+        padding: 12px 14px;
+        border: 1px solid var(--Line);
+        border-radius: 12px;
+        background: var(--Surface);
+    }
+
+    .tb-card {
+        padding: 16px 18px;
+        border: 1px solid var(--Line);
+        border-radius: 12px;
+        background: var(--Surface);
+    }
+}
+
+.tb-ontwerp-index {
+    .tb-ontwerp-head {
+        padding-top: 40px;
+    }
+
+    .tb-ontwerp-head h1 {
+        margin: 10px 0 16px;
+        font-size: 36px;
+        line-height: 46px;
+    }
+
+    .tb-ontwerp-list {
+        list-style: none;
+        margin: 28px 0 8px;
+        padding: 0;
+    }
+
+    .tb-ontwerp-list li {
+        padding: 20px 0;
+        border-top: 1px solid var(--Line);
+    }
+
+    .tb-ontwerp-list li:last-child {
+        border-bottom: 1px solid var(--Line);
+    }
+
+    .tb-ontwerp-list a {
+        color: var(--On-surface);
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 700;
+    }
+
+    .tb-ontwerp-list a:hover {
+        color: var(--Maritime);
+    }
+
+    .tb-ontwerp-list p {
+        margin: 8px 0 0;
+    }
+
+    .tb-ontwerp-advice {
+        margin-top: 20px;
+        color: var(--On-surface);
+    }
+}
+
+@include res(lg) {
+    .tb-article--katern {
+        .tb-katern-layout {
+            grid-template-columns: 1fr;
+            gap: 8px;
+        }
+
+        .tb-toc {
+            position: static;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--Line);
+        }
+
+        .tb-toc a {
+            padding: 10px 0;
+        }
+    }
+}
+
+@include res(md) {
+    .tb-article--katern .tb-katern-head {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-top: 28px;
+    }
+
+    .tb-article--katern .tb-katern-head h1,
+    .tb-article--briefing .tb-briefing-head h1,
+    .tb-ontwerp-index .tb-ontwerp-head h1 {
+        font-size: 30px;
+        line-height: 38px;
+    }
+
+    .tb-article--redactie .tb-redactie-head {
+        padding-top: 32px;
+    }
+}
+
+@include res(sm) {
+    .tb-article p,
+    .tb-steps li,
+    .tb-callout {
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .tb-lede {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .tb-steps li::before {
+        line-height: 28px;
+    }
+
+    .tb-section h2,
+    .tb-sources h2 {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .tb-article--redactie .tb-redactie-intro h1,
+    .tb-article--katern .tb-katern-head h1,
+    .tb-ontwerp-index .tb-ontwerp-head h1 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .tb-article--briefing .tb-briefing-head h1 {
+        font-size: 26px;
+        line-height: 34px;
+    }
+
+    .tb-article--briefing .tb-briefing-head {
+        padding-top: 24px;
+    }
+
+    .tb-card,
+    .tb-article--briefing .tb-steps li {
+        padding: 14px;
+    }
+
+    .tb-variant-nav .tf-container {
+        flex-wrap: nowrap;
+        gap: 0 18px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .tb-variant-nav a {
+        flex: none;
+        padding: 14px 0;
+        white-space: nowrap;
+    }
+
+    .tb-sources {
+        margin-top: 36px;
+    }
+}
+
+.dark-mode {
+    .tb-kicker,
+    .tb-tag,
+    .tb-steps li::before,
+    .tb-sources a,
+    .tb-article--briefing .tb-section--headed h2::before,
+    .tb-ontwerp-index .tb-ontwerp-list a:hover {
+        color: var(--Maritime-light);
+    }
+
+    .tb-article a:focus-visible,
+    .tb-variant-nav a:focus-visible {
+        outline-color: var(--Maritime-light);
+    }
+
+    .tb-callout {
+        border-left-color: var(--Maritime-light);
+    }
+}

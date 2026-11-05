@@ -1,0 +1,66 @@
+@use "../abstracts/index" as *;
+
+/* Animation effects */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.effect-left  {
+    animation: slideInLeft 0.8s ease forwards;
+}
+
+.effect-right  {
+    animation: slideInRight 0.8s ease forwards;
+}
+
+.effect-top  {
+    animation: slideInTop 0.8s ease forwards;
+}
+
+.effect-bottom  {
+    animation: slideInBottom 0.8s ease forwards;
+}

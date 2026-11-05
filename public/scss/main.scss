@@ -1,0 +1,79 @@
+@use "sass:meta";
+@import "../css/bootstrap.css";
+@include meta.load-css("app.scss");
+// @import "../css/jquery.mb.YTPlayer.css";
+@import "../css/swiper-bundle.min.css";
+
+// Font
+@import "../font/fonts.css";
+
+// Icon
+@import "../icons/icomoon/style.css";
+body {
+  .dark-mode-logo {
+    display: none;
+  }
+  &.dark-mode {
+    .light-mode-logo {
+      display: none;
+    }
+    .dark-mode-logo {
+      display: block;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer .footer-col-block .tf-collapse-content {
+    overflow-y: hidden;
+    display: block;
+    height: 0;
+    transition: 0.5s;
+  }
+}
+.form-search.style-1 {
+  z-index: 1;
+}
+@media (min-width: 768px) and (max-width: 1200px) {
+  .blog-card-4-desc {
+    display: none;
+  }
+}
+.object-fit-contain {
+  object-fit: contain;
+}
+.footer-col-block.page-link {
+  &:last-child {
+    border-right: none;
+  }
+}
+.page-3 {
+  .footer-content {
+    border-right: none;
+  }
+}
+.dark-mode {
+  .black-on-dark {
+    color: #161616 !important;
+  }
+}
+.tfSubscribeMsg {
+  display: none;
+  max-height: 0px;
+  // transition: 0.4s;
+  overflow: hidden;
+  &.active {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-height: 180px;
+    display: block;
+  }
+}
+
+.blog-single-image {
+  max-height: 500px;
+  object-fit: contain;
+  height: auto !important;
+  width: auto !important;
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,52 @@
+@use "../abstracts/index" as *;
+
+.dark-mode {
+    --On-surface: #fff;
+    --Surface: #ffffff14;
+    --Surface-light: #161616;
+    --Surface-2-light: #161616;
+    --White-light: #161616;
+    --Line: #ffffff1a;
+    --Maritime-mist: #1a2f4a;
+    --Header-band: #1a2f4a;
+    --Secondary: #a0a0a0;
+    --Secondary2: #4e5052;
+    --Heading: var(--White);
+    --Accent: var(--Maritime-light);
+    .mode-check {
+        --On-surface: #4e5052;
+        --Secondary2: #fff;
+        .toggle-switch-mode {
+            --On-surface: #161616;
+        }
+    }
+    .wrap-tag-categories::after {
+        background: linear-gradient(
+            90deg,
+            rgba(22, 22, 22, 0) 0%,
+            #161616 100%
+        );
+    }
+    .form-newslate {
+        --White-light: rgba(255, 255, 255, 0.08);
+        --On-surface: #161616;
+    }
+    .header-fixed {
+        backdrop-filter: blur(10px);
+    }
+    .sidebar-categories {
+        .number {
+            color: #161616;
+        }
+    }
+    .header-menu {
+        --Surface: #161616;
+    }
+    form input {
+        --On-surface: #fff;
+    }
+    .heading-post.style-1 .post-inner .wrap-meta-feature .tag,
+    .heading-post.style-1 .post-inner .wrap-meta-feature .tag a {
+        color: var(--On-surface);
+    }
+}
